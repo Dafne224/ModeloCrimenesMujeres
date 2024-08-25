@@ -43,7 +43,7 @@ if __name__ == "__main__":
         X, y = remove_outliers(X, y)
         print(f"Datos después de remover outliers: {len(X)} filas de X y {len(y)} valores de y")
 
-        model = GradientDescentLinearRegression(learning_rate=0.001)  # Ajusta la tasa de aprendizaje
+        model = GradientDescentLinearRegression(learning_rate=0.001)
         X_scaled = model.scale_features(X)
         model.fit(X_scaled, y, epochs=1000)
         
